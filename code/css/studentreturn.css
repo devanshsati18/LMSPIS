@@ -1,0 +1,109 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFA500;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#logo{
+    height: 120px;
+    width: 170px;
+    margin: 15px;
+}
+#guru{
+    height: 150px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 15px;
+
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+#header{
+    color: #D00;
+    font-family: 'Inknut Antiqua';
+    font-size: 30px;
+}
+#text1{
+    color: #151EED;
+    font-family: 'Inknut Antiqua';
+    font-size: 23px;
+    
+}
+#text2{
+    color: #B30000;
+    font-family: 'Imperial Script',cursive;
+    font-size: 38px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.form{
+    background-color: chocolate;
+    font-size: x-large;
+    background-color: rgb(255, 145, 0); 
+    border: 10px; 
+    border-radius: 40px;
+    box-sizing: flex;
+    max-width: 800px;
+    max-height: 590px;
+    margin: 45px;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#admissionNoInput{
+    margin-top: 5%;
+    width: 180px;
+    height: 40px;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 25px;
+    
+}
+.hidden {
+    display: none;
+}
+
+#fetchButton{
+    border-radius: 40px;
+    width: 150px;
+    height: 40px;
+    margin: 3%;
+    cursor: pointer;
+}
+
+
+
+#returnBookButton{
+    border-radius: 40px;
+    width: 150px;
+    height: 40px;
+    margin: 3%;
+    cursor: pointer;
+
+}
+
+#returnBookForm{
+    margin-top: 3%;
+}
+#returnBookIdInput{
+    height: 40px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 20px;
+}

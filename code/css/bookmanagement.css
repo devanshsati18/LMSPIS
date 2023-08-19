@@ -1,0 +1,86 @@
+.hidden {
+    display: none;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFA500;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#logo{
+    height: 120px;
+    width: 170px;
+    margin: 15px;
+}
+#guru{
+    height: 150px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 15px;
+
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+#header{
+    color: #D00;
+    font-family: 'Inknut Antiqua';
+    font-size: 30px;
+}
+
+#text1{
+    color: #151EED;
+    font-family: 'Inknut Antiqua';
+    font-size: 23px;
+    
+}
+#text2{
+    color: #B30000;
+    font-family: 'Imperial Script',cursive;
+    font-size: 38px;
+}
+
+
+#showAddFormButton{
+    height: 30px;
+    width: 150px;
+
+}
+
+#showSearchFormButton{
+    height: 30px;
+    width: 150px;
+}
+#addForm{
+    margin-top: 10px;
+}
+#title{
+    font-size: x-large;
+}
+#addbtndetails{
+    height: 40px;
+    width: auto;
+    border-radius: 30px;
+    width: max-content;
+    cursor: pointer;
+}
+#addForm{
+    background-color: chocolate;
+    margin-top: 5%;
+    max-width: 700px;
+    max-height: 1000px;
+    border: black;
+    border-radius: 40px;
+    
+}

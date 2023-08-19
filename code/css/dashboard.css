@@ -1,0 +1,30 @@
+.panel{         /* class for box of buttons */
+    background-color: rgb(255, 145, 0); 
+    border: 10px; 
+    border-radius: 40px;
+    box-sizing: flex;
+    max-width: 800px;
+    max-height: 590px;
+    margin: 45px;
+    }
+
+:hover.btn {
+    background-color: paleturquoise;
+    -ms-zoom-animation: 10px;
+}
+
+ .btn{       /*class for buttons */
+    background-color: burlywood;
+    background-size: auto;
+    width: 300px;
+    padding: 5px;
+    margin: 35px;
+    border-radius: 20px;
+
+    
+}
+.body{
+    background-image: yellow;
+}
+
+

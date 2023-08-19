@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Issueing</title>
+    <link rel="stylesheet" href="../css/studentissueing.css">
+</head>
+<body>
+    <div class="nav">
+        <img src="../images/logo_pis.png" alt="logo" id="logo"/>
+        <div class="text">
+          <h1 id="header">PRAVANANDA INTERNATIONAL SCHOOL</h1>
+          <h3 id="text1">(An Educational Unit of Bharat Sevasharam Sangha)</h3>
+          <h2 id="text2">School with a  difference</h2>
+        </div>
+        <img src="../images/guruji.jpg" alt="guru" id="guru"/>
+    </div>
+
+    <div class="form">
+        <center>
+     <label for="admissionNoInput"> Student Admission NO</label>       
+    <input type="text" id="admissionNoInput" >
+    <br>
+    <button id="fetchButton">Fetch Details</button>
+    <div id="detailsContainer" class="hidden">
+        <h2>Student Details</h2>
+        <p><strong>Name:</strong> <span id="studentName"></span></p>
+        <p><strong>Admission No:</strong> <span id="studentAdmissionNo"></span></p>
+        <p><strong>Class:</strong> <span id="Class"></span></p>
+        <p><strong>DOB:</strong> <span id="DOB"></span></p>
+        <p><strong>Issued Book ID:</strong> <span id="issuedBookId"></span></p>
+        <div id="issueBookForm" class="hidden">
+            <label for="bookIdInput">Enter Book Code</label>
+            <input type="text" id="bookIdInput" placeholder="Enter Book ID">
+            <br>
+            <button id="issueBookButton">Issue Book</button>
+            <p id="submissionDate"></p>
+        </div>
+    </div>
+</center>
+</div>
+    <script type="module" src="../js/studentissueing.js"></script>
+</body>
+</html>
