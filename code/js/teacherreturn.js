@@ -23,6 +23,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth();
 
 var sub, user, pass, mainContent, loggedIn;
 var loggedIn = document.querySelector(".logged-in");
