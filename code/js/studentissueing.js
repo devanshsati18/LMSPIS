@@ -117,3 +117,16 @@ issueBookButton.addEventListener("click", async () => {
         issuedBookId.textContent = bookId;
     }
 });
+
+
+//format of geetin proper date
+
+function getCurrentDateFormatted() {
+    const currentDate = new Date();
+    const day = String(currentDate.getDate()).padStart(2, '0');
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Note: Month is zero-based
+    const year = currentDate.getFullYear();
+    return `${day}-${month}-${year}`;
+}
+
+const formattedDate = getCurrentDateFormatted();
