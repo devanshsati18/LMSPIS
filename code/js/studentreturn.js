@@ -24,6 +24,39 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+
+var sub, user, pass, mainContent, loggedIn;
+var loggedIn = document.querySelector(".logged-in");
+
+
+// authenticating user
+const email = sessionStorage.getItem("Email");
+const password = sessionStorage.getItem("Password");
+
+var pattern = /^([a-zA-Z0-9\.]+@+[a-zA-Z]+(\.)+[a-zA-Z]{2,3})$/;
+var result = pattern.test(email);
+
+if (result == true && password.length >= 6) {
+    let obj = {
+        email: email,
+        password: password,
+    };
+
+    signInWithEmailAndPassword(auth, obj.email, obj.password)
+        .then(function (_success) { })
+        .catch(function (err) {
+            swal({
+                title: "Opps !",
+                text: "Something Went Wrong Please Try Again",
+                icon: "error",
+                button: "OK",
+            });
+        });
+} else {
+    window.location = "../../index.html";
+}
+
+
 const admissionNoInput = document.getElementById("admissionNoInput");
 const fetchButton = document.getElementById("fetchButton");
 const detailsContainer = document.getElementById("detailsContainer");
