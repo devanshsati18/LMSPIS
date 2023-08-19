@@ -27,6 +27,32 @@
 
 }
 
+#searchForm{
+    background-color: chocolate;
+    margin-top: 50px;
+    width: 600px;
+    border-radius: 40px;
+    max-width: 1500px;
+}
+
+#documentIdtxt{
+    margin-right: 10px;
+    
+}
+
+#documentId{
+    border-radius: 40px;
+    height: 50px;
+    width: 200px;
+    
+}
+#viewButton{
+    height: 40px;
+    width: 100px;
+    border-radius: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
 .text{
     display: flex;
     align-items: center;

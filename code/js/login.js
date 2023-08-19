@@ -1,11 +1,11 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
 import {
   getAuth,
   signInWithEmailAndPassword,
-} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
 
 // Web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
