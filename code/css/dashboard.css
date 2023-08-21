@@ -4,8 +4,9 @@
     border-radius: 40px;
     box-sizing: flex;
     max-width: 800px;
-    max-height: 590px;
-    margin: 45px;
+    max-height: 1000px;
+    margin-top: 60px;
+    margin-right: 45px;
     }
 
 :hover.btn {
@@ -28,3 +29,7 @@
 }
 
 
+#logoutButton{
+    position: absolute;
+    right: 10px;
+}

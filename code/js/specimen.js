@@ -91,7 +91,7 @@ addBookForm.addEventListener("submit", async (event) => {
 
     // Add book to Firestore
     try{
-    const docRef = await addDoc(collection(db, "books"), {
+    const docRef = await addDoc(collection(db, "specimen"), {
         author,
         title,
         page,
@@ -131,7 +131,7 @@ viewButton.addEventListener("click", async () => {
     const documentId = documentIdInput.value;
 
     if (documentId) {
-        const bookDoc = doc(db, "books", documentId);
+        const bookDoc = doc(db, "specimen", documentId);
         const bookSnapshot = await getDoc(bookDoc);
 
         if (bookSnapshot.exists()) {

@@ -99,8 +99,9 @@ fetchButton.addEventListener("click", async () => {
 issueBookButton.addEventListener("click", async () => {
     const bookId = bookIdInput.value;
     if (bookId) {
-        const studentDoc = doc(db, "Student Data", admissionNoInput.value);
-        const currentDate = new Date().toISOString().split("T")[0];
+        AddNo =admissionNoInput.value;
+        const studentDoc = doc(db, "Student Data", AddNo);
+        const currentDate = getCurrentDateFormatted();
         const submissionDateValue = new Date();
         submissionDateValue.setDate(submissionDateValue.getDate() + 7);
         const submissionDateFormatted = submissionDateValue.toISOString().split("T")[0];

@@ -91,9 +91,7 @@
 #addForm{
     margin-top: 10px;
 }
-#title{
-    font-size: x-large;
-}
+
 #addbtndetails{
     height: 40px;
     width: auto;
@@ -109,4 +107,40 @@
     border: black;
     border-radius: 40px;
     
+}
+
+#showAddFormButton{
+    background-color: tan;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#showSearchFormButton{
+    cursor: pointer;
+    margin: 10px;
+    background-color: tan;
+}
+
+#title{
+    margin: 10px;
+    width: 400px;
+    height: 25px;
+    font-size: larger;
+}
+#author{
+    margin: 10px;
+}
+#pages{
+    margin: 10px;
+}
+#dccno{
+    margin:10px ;}
+
+#addbtndetails{
+    margin-top: 20px;
+    height: 45px;
+    width: 100px;
+}
+.hidden {
+    display: none;
 }

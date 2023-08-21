@@ -18,15 +18,15 @@
         <img src="../images/guruji.jpg" alt="guru" id="guru"/>
     </div>
     <center>
-    <div class="toggleform">
+    <div id="toggleform">
         
-    <button id="showAddFormButton">Show Add Form</button>
-    <button id="showSearchFormButton">Show Search Form</button> 
+    <button id="showAddFormButton">Add Book</button>
+    <button id="showSearchFormButton">Search/Delete Book</button> 
     
     </div>
 
     <form id="addForm" class="hidden">
-        
+        <center><h1>--Add Book Details--</h1>
             <label for="title">Title:</label>
             <input  id="title" name="title" required><br>
         
@@ -45,13 +45,14 @@
             <label for="accno">Accession No:</label>
             <input  id="accno" name="Accession No" required>
             
-            <label for="ddcno">Classification No:</label>
-            <input  id="ddcno" name="Accession No" required><br>
+            <label for="classficationNo">Classification No:</label>
+            <input  id="classficationNo" name="classficationNo" required><br>
 
             <button id="addbtndetails"type="submit">Add Book</button>
         
     
         <button id="printBarcodeButton" class="hidden">Print Barcode</button>
+    </center>
     </form>
 
     <form id="searchForm" class="hidden">
@@ -63,6 +64,12 @@
 
     <div id="bookDetails" class="hidden">
         <!-- Display book details here -->
+        <h2>Student Details</h2>
+        <p><strong>Author:</strong> <span id="studentName"></span></p>
+        <p><strong>Admission No:</strong> <span id="studentAdmissionNo"></span></p>
+        <p><strong>Class:</strong> <span id="Class"></span></p>
+        <p><strong>DOB:</strong> <span id="DOB"></span></p>
+        <p><strong>Issued Book ID:</strong> <span id="issuedBookId"></span></p>
     </div>
 
     <button id="deleteButton" class="hidden">Delete Book</button>

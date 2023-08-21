@@ -86,6 +86,7 @@ addBookForm.addEventListener("submit", async (event) => {
     const price = addBookForm.querySelector("#price").value;
     const accno = addBookForm.querySelector("#accno").value;
     const publisher = addBookForm.querySelector("#publisher").value;
+    const dccno = addBookForm.querySelector("#classficationNo").value;
 
     // ... Collect other form field values ...
 
@@ -97,7 +98,8 @@ addBookForm.addEventListener("submit", async (event) => {
         page,
         price,
         accno,
-        publisher
+        publisher,
+        dccno,
         // ... Other book details ...
     });
 
@@ -118,38 +120,32 @@ addBookForm.addEventListener("submit", async (event) => {
 
 
 
+fetchButton.addEventListener("click", async () => {
+    const AdmNo = admissionNoInput.value;
+    if (AdmNo) {
+        const studentDoc = doc(db, "Student Data", AdmNo);
+        const studentSnapshot = await getDoc(studentDoc);
 
+        if (studentSnapshot.exists()) {
+            const studentData = studentSnapshot.data();
+            studentName.textContent = studentData.Name;
+            studentAdmissionNo.textContent = studentData.AdmNo;
+            Class.textContent = studentData.CLASS;
+            DOB.textContent = studentData.DOB
+            issuedBookId.textContent = studentData.issuedBookId || "None";
 
+            if (!studentData.issuedBookId) {
+                issueBookForm.classList.remove("hidden");
+            } else {
+                issueBookForm.classList.add("hidden");
+            }
 
-// for the search and delete form elements
-
-const documentIdInput = document.getElementById("documentId");
-const viewButton = document.getElementById("viewButton");
-const bookDetails = document.getElementById("bookDetails");
-
-viewButton.addEventListener("click", async () => {
-    const documentId = documentIdInput.value;
-
-    if (documentId) {
-        const bookDoc = doc(db, "books", documentId);
-        const bookSnapshot = await getDoc(bookDoc);
-
-        if (bookSnapshot.exists()) {
-            const bookData = bookSnapshot.data();
-            displayBookDetails(bookData);
+            detailsContainer.classList.remove("hidden");
         } else {
-            alert("Book not found.");
+            detailsContainer.classList.add("hidden");
+            alert("Student not found.");
         }
     }
 });
 
-function displayBookDetails(bookData) {
-    bookDetails.innerHTML = `
-        <h2>Book Details</h2>
-        <p><strong>Author Name:</strong> ${bookData.author}</p>
-        <p><strong>Book Title:</strong> ${bookData.title}</p>
-        <!-- Display other book details here -->
-    `;
 
-    bookDetails.classList.remove("hidden");
-}

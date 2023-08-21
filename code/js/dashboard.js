@@ -2,6 +2,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.1.0/firebas
 import {
     getAuth,
     signInWithEmailAndPassword,
+    signOut,
   } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 
   const firebaseConfig = {
@@ -50,3 +51,23 @@ if (result == true && password.length >= 6) {
 } else {
     window.location = "../../index.html";
 }
+
+// Logout button click event
+const logoutButton = document.getElementById('logoutButton');
+logoutButton.addEventListener('click', () => {
+  signOut(auth)
+    .then(() => {
+      console.log('User signed out');
+      // Redirect to login page after logout
+      window.location.href = "../../index.html"; // Change to your login page path
+    })
+    .catch(error => {
+      console.error('Error signing out:', error);
+    });
+});
+
+
+
+
+
+
