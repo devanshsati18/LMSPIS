@@ -20,18 +20,16 @@
 
     <div class="form">
         <center>
-     <label for="empIDInput"> Teacher ID</label>       
-    <input type="text" id="empIDInput" >
-    <br>
-    <button id="fetchButton">Fetch Details</button>
-    <div id="detailsContainer" class="hidden">
-        <h2>Student Details</h2>
-        <p><strong>Name:</strong> <span id="teacherName"></span></p>
-        <p><strong>Teacher ID:</strong> <span id="empID"></span></p>
-        <p><strong>DOB:</strong> <span id="DOB"></span></p>
-        <p><strong>Contact No</strong> <span id="Contact No"></span></p>
-        <p><strong>Email ID:</strong> <span id="Email"></span></p>
-        <p><strong>Issued Book ID:</strong> <span id="issuedBookId"></span></p>
+            <label for="EmpIDInput"> Teacher ID:</label>       
+            <input id="EmpIDInput" type="text">
+            <br>
+            <button id="fetchButton">Fetch Details</button>
+            <div id="detailsContainer" class="hidden" >
+                <h2>--Teacher Details--</h2>
+                <p><strong>Name:</strong> <span id="teacherName"></span></p>
+                <p><strong>Teacher ID:</strong> <span id="EmpID"></span></p>
+                <p><strong>Email:</strong> <span id="mail"></span></p>
+                <p><strong>DOB:</strong> <span id="DOB"></span></p>
         <div id="issueBookForm" class="hidden">
             <label for="bookIdInput">Enter Book Code</label>
             <input type="text" id="bookIdInput" placeholder="Enter Book ID">

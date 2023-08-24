@@ -20,17 +20,33 @@
 
     <div class="form">
         <center>
-     <label for="admissionNoInput"> Student Admission NO</label>       
-    <input type="text" id="admissionNoInput" >
+     <label for="EmpIDInput"> Teacher ID:</label>       
+    <input id="EmpIDInput" type="text">
     <br>
+    <!--form to fetch the details of the teacher-->
     <button id="fetchButton">Fetch Details</button>
-    <div id="detailsContainer" class="hidden">
-        <h2>Student Details</h2>
-        <p><strong>Name:</strong> <span id="studentName"></span></p>
-        <p><strong>Admission No:</strong> <span id="studentAdmissionNo"></span></p>
-        <p><strong>Class:</strong> <span id="Class"></span></p>
+    <div id="detailsContainer" class="hidden" >
+        <h2>--Teacher Details--</h2>
+        <p><strong>Name:</strong> <span id="teacherName"></span></p>
+        <p><strong>Teacher ID:</strong> <span id="EmpID"></span></p>
+        <p><strong>Email:</strong> <span id="mail"></span></p>
         <p><strong>DOB:</strong> <span id="DOB"></span></p>
-        <p><strong>Issued Book ID:</strong> <span id="issuedBookId"></span></p>
+        <!--display the data of the book in the form of a tabel-->
+        <div class="container1">
+            <h1>Books Data</h1>
+            <table id="data-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Year</th>
+                </tr>
+              </thead>
+              <tbody id="table-body"></tbody>
+            </table>
+          </div>
+        
+        <!--for issueing the books-->
         <div id="issueBookForm" class="hidden">
             <label for="bookIdInput">Enter Book Code</label>
             <input type="text" id="bookIdInput" placeholder="Enter Book ID">
@@ -41,6 +57,6 @@
     </div>
 </center>
 </div>
-    <script type="module" src="../js/studentissueing.js"></script>
+    <script type="module" src="../js/teacherissueing.js"></script>
 </body>
 </html>

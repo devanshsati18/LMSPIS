@@ -89,3 +89,33 @@ fetchButton.addEventListener("click", async () => {
         }
     }
 });
+
+
+db.collection("books").get().then((querySnapshot) => {
+    var tableBody = document.getElementById("table-body");
+    
+    querySnapshot.forEach((doc) => {
+      var data = doc.data();
+      var row = document.createElement("tr");
+      
+      var titleCell = document.createElement("td");
+      titleCell.textContent = data.title;
+      
+      var authorCell = document.createElement("td");
+      authorCell.textContent = data.author;
+      
+      var yearCell = document.createElement("td");
+      yearCell.textContent = data.year;
+      
+      row.appendChild(titleCell);
+      row.appendChild(authorCell);
+      row.appendChild(yearCell);
+      
+      tableBody.appendChild(row);
+    });
+  });
+  
+  
+  
+  
+  
