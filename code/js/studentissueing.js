@@ -2,6 +2,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.1.0/firebas
 import { getFirestore, 
     doc,
     setDoc,
+    updateDoc,
     addDoc,
     collection,
     getDoc, } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js';
@@ -98,36 +99,53 @@ fetchButton.addEventListener("click", async () => {
 
 issueBookButton.addEventListener("click", async () => {
     const bookId = bookIdInput.value;
+    const admNo = admissionNoInput.value;
     if (bookId) {
-        AddNo =admissionNoInput.value;
-        const studentDoc = doc(db, "Student Data", AddNo);
-        const currentDate = getCurrentDateFormatted();
-        const submissionDateValue = new Date();
-        submissionDateValue.setDate(submissionDateValue.getDate() + 7);
-        const submissionDateFormatted = submissionDateValue.toISOString().split("T")[0];
+        const studentDoc = doc(db, "Student Data", admNo);
+        const studentSnapshot = await getDoc(studentDoc);
+        
+        if (studentSnapshot.exists()) {
+            const studentData = studentSnapshot.data();
 
-        await addDoc(studentDoc, {
-            issuedBookId: bookId,
-            issueDate: currentDate,
-            submissionDate: submissionDateFormatted
-        });
+            if (!studentData.issuedBookId) {
+                const currentDate = getCurrentDateFormatted();
+                const submissionDateValue = new Date();
+                submissionDateValue.setDate(submissionDateValue.getDate() + 7);
+                const submissionDateFormatted = formatDate(submissionDateValue);
+                
+                await updateDoc(studentDoc, {
+                    issuedBookId: bookId,
+                    issueDate: currentDate,
+                    submissionDate: submissionDateFormatted
+                });
 
-        submissionDate.textContent = `Submission Date: ${submissionDateFormatted}`;
-        submissionDate.classList.remove("hidden");
-        issueBookForm.classList.add("hidden");
-        issuedBookId.textContent = bookId;
+                submissionDate.textContent = `Return Date: ${submissionDateFormatted}`;
+                submissionDate.classList.remove("hidden");
+                issueBookForm.classList.add("hidden");
+                issuedBookId.textContent = bookId;
+                issueBookButton.disabled = true; // Disable the button
+            } else {
+                alert("Book has already been issued.");
+            }
+        } else {
+            alert("Student not found.");
+        }
     }
 });
 
-
-//format of geetin proper date
-
+// Function to get the current date formatted as DD-MM-YYYY
 function getCurrentDateFormatted() {
-    const currentDate = new Date();
-    const day = String(currentDate.getDate()).padStart(2, '0');
-    const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Note: Month is zero-based
-    const year = currentDate.getFullYear();
+    const today = new Date();
+    const day = String(today.getDate()).padStart(2, "0");
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const year = today.getFullYear();
     return `${day}-${month}-${year}`;
 }
 
-const formattedDate = getCurrentDateFormatted();
+// Function to format a date as DD-MM-YYYY
+function formatDate(date) {
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const year = date.getFullYear();
+    return `${day}-${month}-${year}`;
+}

@@ -108,6 +108,19 @@ addBookForm.addEventListener("submit", async (event) => {
 
     alert("Book added sucessfully");
 
+    // Printin the Qr code 
+
+    printBarcodeButton.classList.remove("hidden");
+
+    // Generate barcode and display it
+    const barcodeContent = docRef.id;
+    const barcodeSvg = document.getElementById('barcodeSvg'); // Replace with your SVG element
+    JsBarcode(barcodeSvg, barcodeContent, {
+        format: "CODE128",
+        displayValue: true,
+        height: 50
+    });
+
     
 
 } catch (error) {
@@ -152,9 +165,12 @@ searchButton.addEventListener('submit', async () => {
       pages.textContent = price.pages;
       publisher.textContent = publisher.year;
 
-      console.log("Data is sucessfuly fetched");
+      
 
       bookDetails.classList.remove("hidden1");
+
+      
+
 
 
       
