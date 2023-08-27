@@ -75,7 +75,7 @@ showSearchFormButton.addEventListener("click", () => {
 });
 
 const addBookForm = document.getElementById("addForm");
-const printBarcodeButton = document.getElementById("printBarcodeButton");
+const printBarcodeButtons = document.getElementById("printBarcodeButton");
 
 addBookForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -103,11 +103,8 @@ addBookForm.addEventListener("submit", async (event) => {
         // ... Other book details ...
     });
 
-    // Generate barcode using the document reference ID
-    const barcodeImage = generateBarcodeImage(docRef.id);
+     
 
-    // Print barcode image
-    printBarcode(barcodeImage);
 
     alert("Book added sucessfully");
 
@@ -120,32 +117,81 @@ addBookForm.addEventListener("submit", async (event) => {
 
 
 
-fetchButton.addEventListener("click", async () => {
-    const AdmNo = admissionNoInput.value;
-    if (AdmNo) {
-        const studentDoc = doc(db, "Student Data", AdmNo);
-        const studentSnapshot = await getDoc(studentDoc);
+// code to search the books and delete the data of the book 
 
-        if (studentSnapshot.exists()) {
-            const studentData = studentSnapshot.data();
-            studentName.textContent = studentData.Name;
-            studentAdmissionNo.textContent = studentData.AdmNo;
-            Class.textContent = studentData.CLASS;
-            DOB.textContent = studentData.DOB
-            issuedBookId.textContent = studentData.issuedBookId || "None";
 
-            if (!studentData.issuedBookId) {
-                issueBookForm.classList.remove("hidden");
-            } else {
-                issueBookForm.classList.add("hidden");
-            }
+const searchButton = document.getElementById('viewButton');
+const searchInput = document.getElementById('documentIdtxt');
+const bookDetails = document.getElementById('bookDetails');
+const title = document.getElementById('title');
+const author = document.getElementById('author');
+const year = document.getElementById('year');
+const accno = document.getElementById('accno');
+const dccno = document.getElementById('dccno');
+const pages = document.getElementById('pages');
+const price = document.getElementById('price');
+const publisher = document.getElementById('publisher');
 
-            detailsContainer.classList.remove("hidden");
-        } else {
-            detailsContainer.classList.add("hidden");
-            alert("Student not found.");
-        }
+const deleteButton = document.getElementById('deleteButton');
+
+searchButton.addEventListener('submit', async () => {
+  const bookCode = searchInput.value;
+
+  try {
+    const docRef = doc(db, "books", bookCode);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      const data = docSnap.data();
+      title.textContent = data.title;
+      author.textContent = data.author;
+      year.textContent = data.year;
+      accno.textContent = data.accno;
+      dccno.textContent = dccno.author;
+      price.textContent = price.year;
+      pages.textContent = price.pages;
+      publisher.textContent = publisher.year;
+
+      console.log("Data is sucessfuly fetched");
+
+      bookDetails.classList.remove("hidden1");
+
+
+      
+    } else {
+      clearBookDetails();
     }
+  } catch (error) {
+    console.error("Error fetching document: ", error);
+    clearBookDetails();
+  }
 });
+
+deleteButton.addEventListener('click', async () => {
+  const bookCode = searchInput.value;
+
+  try {
+    await deleteDoc(doc(db, "books", bookCode));
+    clearBookDetails();
+  } catch (error) {
+    console.error("Error deleting document: ", error);
+  }
+});
+
+function displayBookDetails(data, bookCode) {
+  titleSpan.textContent = data.title;
+  authorSpan.textContent = data.author;
+  yearSpan.textContent = data.year;
+  deleteButton.dataset.bookCode = bookCode;
+  bookDetails.classList.remove('hidden');
+}
+
+function clearBookDetails() {
+  titleSpan.textContent = "";
+  authorSpan.textContent = "";
+  yearSpan.textContent = "";
+  deleteButton.dataset.bookCode = "";
+  bookDetails.classList.add('hidden');
+}
 
 

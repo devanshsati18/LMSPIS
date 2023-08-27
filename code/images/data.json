@@ -1,0 +1,528 @@
+[
+    {
+     "ID ": "001\/18",
+     "NAME": "Jeevitendra Sati",
+     "DOB": "12\/04\/1972",
+     "DESIGNATION": "PRINCIPAL",
+     "email ID": "jeevitendrasati@gmail.com",
+     "MOBILE NO": 9810310785
+    },
+    {
+     "ID ": "002\/22",
+     "NAME": "SEEMA SATI",
+     "DOB": "08\/18\/1979",
+     "DESIGNATION": "VICE PRINCIPAL",
+     "email ID": "seemadimria@yahoo.com",
+     "MOBILE NO": 9718408020
+    },
+    {
+     "ID ": "003\/20",
+     "NAME": "Meenakshi Yadav",
+     "DOB": "04\/13\/1988",
+     "DESIGNATION": "PGT Mathematics",
+     "email ID": "raoachi596@gmail.com",
+     "MOBILE NO": 9643820075
+    },
+    {
+     "ID ": "004\/21",
+     "NAME": "MOHIT SALUJA",
+     "DOB": "08\/14\/1987",
+     "DESIGNATION": "PGT Physics",
+     "email ID": "mohit.saluja30@gmail.com",
+     "MOBILE NO": 9582266686
+    },
+    {
+     "ID ": "005\/22",
+     "NAME": "Bharti Yadav",
+     "DOB": "06\/02\/1982",
+     "DESIGNATION": "PGT Economics",
+     "email ID": "yaday02bharti@gmail.com",
+     "MOBILE NO": 9718040690
+    },
+    {
+     "ID ": "006\/21",
+     "NAME": "POOJA YADAV",
+     "DOB": "02\/10\/1990",
+     "DESIGNATION": "PGT BIOLOGY",
+     "email ID": "poojays7771@gmail.com",
+     "MOBILE NO": 9582810771
+    },
+    {
+     "ID ": "007\/21",
+     "NAME": "NAMITA PANDEY",
+     "DOB": "02\/05\/1973",
+     "DESIGNATION": "PGT CHEMISTRY",
+     "email ID": "namitapandey05@gmail.com",
+     "MOBILE NO": 9810370461
+    },
+    {
+     "ID ": "008\/22",
+     "NAME": "KSHITIZ RAGHAV",
+     "DOB": "09\/23\/1997",
+     "DESIGNATION": "PGT PHYSICAL EDUCATION",
+     "email ID": "teddyraghav@gmail.com",
+     "MOBILE NO": 8447457025
+    },
+    {
+     "ID ": "009\/22",
+     "NAME": "ASHA KHOLA",
+     "DOB": "04\/28\/1984",
+     "DESIGNATION": "PGT ENGLISH",
+     "email ID": "ASHAKHOLA84@GMAIL.COM",
+     "MOBILE NO": 7838475691
+    },
+    {
+     "ID ": "010\/22",
+     "NAME": "Payal Arora",
+     "DOB": "06\/05\/1992",
+     "DESIGNATION": "TGT Science",
+     "email ID": "Payal.arora1oo1@gmail.com",
+     "MOBILE NO": 8447805353
+    },
+    {
+     "ID ": "011\/16",
+     "NAME": "Savita Pant",
+     "DOB": "10\/18\/1983",
+     "DESIGNATION": "TGT ( Mathematics)",
+     "email ID": "savi.pant2008@gmail.com",
+     "MOBILE NO": 9599224933
+    },
+    {
+     "ID ": "012\/18",
+     "NAME": "Sonika Sharma",
+     "DOB": "10\/04\/1985",
+     "DESIGNATION": "PRT(Computer Teacher)",
+     "email ID": "sonika.sharma001@gmail.com",
+     "MOBILE NO": 9910782153
+    },
+    {
+     "ID ": "013\/16",
+     "NAME": "Pawan Soni",
+     "DOB": "05\/08\/1978",
+     "DESIGNATION": "PRT(Art Teacher)",
+     "email ID": "pawansoni78@gmail.com",
+     "MOBILE NO": 7503232033
+    },
+    {
+     "ID ": "014\/21",
+     "NAME": "JOLLY JHA",
+     "DOB": "03\/02\/1988",
+     "DESIGNATION": "PRT",
+     "email ID": "jollyayush1234@gmail.com",
+     "MOBILE NO": 8800128337
+    },
+    {
+     "ID ": "015\/21",
+     "NAME": "SANGEETA DADWAL",
+     "DOB": "08\/14\/1981",
+     "DESIGNATION": "PRT\/HINDI",
+     "email ID": "sangeetadadwal1@gmail.com",
+     "MOBILE NO": 9667699103
+    },
+    {
+     "ID ": "016\/21",
+     "NAME": "MONIKA MITTAL",
+     "DOB": "04\/29\/1989",
+     "DESIGNATION": "TGT",
+     "email ID": "mnkagpta29@gmail.com",
+     "MOBILE NO": 8901275498
+    },
+    {
+     "ID ": "017\/22",
+     "NAME": "MANISHA SAINI",
+     "DOB": "01\/01\/1984",
+     "DESIGNATION": "PRT",
+     "email ID": "mani.saini83@gmail.com",
+     "MOBILE NO": 9306915785
+    },
+    {
+     "ID ": "018\/22",
+     "NAME": "PRIYANKA GOGIA",
+     "DOB": "12\/04\/1985",
+     "DESIGNATION": "PRT",
+     "email ID": "prynkakamra580@gmail.com",
+     "MOBILE NO": 9310006160
+    },
+    {
+     "ID ": "019\/22",
+     "NAME": "SWATI DWIVEDI",
+     "DOB": "07\/06\/1984",
+     "DESIGNATION": "FRENCH TEACHER\/PRT",
+     "email ID": "swatidwivedi11012009@gmail.com",
+     "MOBILE NO": 9910634574
+    },
+    {
+     "ID ": "020\/22",
+     "NAME": "DEEPANJALI SINGH",
+     "DOB": "05\/18\/1986",
+     "DESIGNATION": "PRT",
+     "email ID": "dsmghteach@gmail.com",
+     "MOBILE NO": 9582227666
+    },
+    {
+     "ID ": "021\/22",
+     "NAME": "NEHA AWASTHI",
+     "DOB": "01\/06\/1980",
+     "DESIGNATION": "PRT",
+     "email ID": "neha_dwivedi11@hotmail.com",
+     "MOBILE NO": 9958065669
+    },
+    {
+     "ID ": "022\/22",
+     "NAME": "KUMKUM SINGH",
+     "DOB": "05\/21\/1977",
+     "DESIGNATION": "NTT",
+     "email ID": "kumsin.singh@gmail.com",
+     "MOBILE NO": 9740517788
+    },
+    {
+     "ID ": "023\/22",
+     "NAME": "RAHUL BHOLLA",
+     "DOB": "08\/10\/1990",
+     "DESIGNATION": "MUSIC",
+     "email ID": "rahul.sai71@gmail.com",
+     "MOBILE NO": 9871418626
+    },
+    {
+     "ID ": "024\/22",
+     "NAME": "BANITA BAKSHI",
+     "DOB": "07\/21\/1990",
+     "DESIGNATION": "PRT",
+     "email ID": "banitabakshi777@gmail.com",
+     "MOBILE NO": 7404109707
+    },
+    {
+     "ID ": "025\/22",
+     "NAME": "MEENAKSHI TOMAR",
+     "DOB": "07\/10\/1989",
+     "DESIGNATION": "NTT",
+     "email ID": "meenakshirohityash@gmail.com",
+     "MOBILE NO": 7895092233
+    },
+    {
+     "ID ": "026\/22",
+     "NAME": "ANU GAUTAM",
+     "DOB": "03\/14\/1988",
+     "DESIGNATION": "NTT",
+     "email ID": "anutyagi0814@gmail.com",
+     "MOBILE NO": 8630472151
+    },
+    {
+     "ID ": "027\/22",
+     "NAME": "BHAGWATI",
+     "DOB": "07\/02\/1979",
+     "DESIGNATION": "PRT",
+     "email ID": "bhagwatinagar@gmail.com",
+     "MOBILE NO": 8178131712
+    },
+    {
+     "ID ": "028\/22",
+     "NAME": "SARIKA CHHABRA",
+     "DOB": "07\/29\/1978",
+     "DESIGNATION": "NTT",
+     "email ID": "sarikachhabra111@gmail.com",
+     "MOBILE NO": 9958616764
+    },
+    {
+     "ID ": "029\/22",
+     "NAME": "DAYANAND SHARMA",
+     "DOB": "12\/05\/1983",
+     "DESIGNATION": "TGT",
+     "email ID": "kavyadayabharti@gmail.com",
+     "MOBILE NO": 9555446977
+    },
+    {
+     "ID ": "030\/22",
+     "NAME": "EKTA SHARMA",
+     "DOB": "11\/23\/1979",
+     "DESIGNATION": "PRT",
+     "email ID": "ESHARMA2021@GMAIL.COM",
+     "MOBILE NO": 9818918224
+    },
+    {
+     "ID ": "031\/22",
+     "NAME": "PRITI SINGH",
+     "DOB": "07\/25\/1988",
+     "DESIGNATION": "LAB ASSISSTENT",
+     "email ID": "p25s21singh@gmail.com",
+     "MOBILE NO": 7575854745
+    },
+    {
+     "ID ": "032\/22",
+     "NAME": "BARKHA SINGH",
+     "DOB": "01\/26\/1991",
+     "DESIGNATION": "NTT",
+     "email ID": "barkhamalyansingh@gmail.com",
+     "MOBILE NO": 8005784006
+    },
+    {
+     "ID ": "033\/21",
+     "NAME": "KRISHNA PADA MANDAL",
+     "DOB": "04\/06\/1994",
+     "DESIGNATION": "PRT",
+     "email ID": "br.krishnabss@gmail.com",
+     "MOBILE NO": 9734603678
+    },
+    {
+     "ID ": "034\/22",
+     "NAME": "KULDEEP SINGH",
+     "DOB": "09\/13\/1998",
+     "DESIGNATION": "SKATING TEACHER",
+     "email ID": "kuldeepshekhawat102@gmail.com",
+     "MOBILE NO": 9785095532
+    },
+    {
+     "ID ": "035\/23",
+     "NAME": "PROMILA SHARMA",
+     "DOB": "01\/15\/1982",
+     "DESIGNATION": "PGT-English",
+     "email ID": "sha.promila@gmail.com",
+     "MOBILE NO": 8800669599
+    },
+    {
+     "ID ": "036\/22",
+     "NAME": "ANUJA SINHA",
+     "DOB": "11\/07\/1985",
+     "DESIGNATION": "PRT",
+     "email ID": "anujasinha.bwr@gmail.com",
+     "MOBILE NO": 9873924510
+    },
+    {
+     "ID ": "037\/22",
+     "NAME": "SUMAN GUPTA",
+     "DOB": "06\/28\/1988",
+     "DESIGNATION": "NTT",
+     "email ID": "sumangupta6430@gmail.com",
+     "MOBILE NO": 9650621610
+    },
+    {
+     "ID ": "038\/23",
+     "NAME": "DEEPAK KUMAR",
+     "DOB": "09\/02\/1991",
+     "DESIGNATION": "PGT-Computer Science",
+     "email ID": "deepakkaindal@gmal.com",
+     "MOBILE NO": 9717722980
+    },
+    {
+     "ID ": "039\/23",
+     "NAME": "PUSHPANJALI SINGH",
+     "DOB": "11\/20\/1973",
+     "DESIGNATION": "TGT-Hindi",
+     "email ID": "dr.pushpanjali@gmail.com",
+     "MOBILE NO": 9911192459
+    },
+    {
+     "ID ": "040\/23",
+     "NAME": "MAHIPAL SINGH",
+     "DOB": "06\/29\/1990",
+     "DESIGNATION": "PRT-Music",
+     "email ID": "mahipalsingh2961990@gmail.com",
+     "MOBILE NO": 8107484308
+    },
+    {
+     "ID ": "041\/23",
+     "NAME": "MEENU PANDEY",
+     "DOB": "09\/11\/1996",
+     "DESIGNATION": "PRT",
+     "email ID": "pandey.602meenu@gmail.com",
+     "MOBILE NO": 9915499227
+    },
+    {
+     "ID ": "042\/23",
+     "NAME": "KOMAL RAKWAL",
+     "DOB": "02\/20\/1988",
+     "DESIGNATION": "PRT",
+     "email ID": "komalrakwal@gmail.com",
+     "MOBILE NO": 8800761358
+    },
+    {
+     "ID ": "043\/23",
+     "NAME": "PRABJEET KAUR",
+     "DOB": "01\/29\/1990",
+     "DESIGNATION": "PRT",
+     "email ID": "prabjeetkaur29@gmail.com",
+     "MOBILE NO": 8093391691
+    },
+    {
+     "ID ": "044\/23",
+     "NAME": "RITU SHARMA",
+     "DOB": "09\/10\/1979",
+     "DESIGNATION": "PRT-Libearian",
+     "email ID": "RISHUDIVI1811@GMAIL.COM",
+     "MOBILE NO": 9717889812
+    },
+    {
+     "ID ": "045\/23",
+     "NAME": "SIRIN",
+     "DOB": "10\/15\/1982",
+     "DESIGNATION": "PRT",
+     "email ID": "thakursirin@gmail.com",
+     "MOBILE NO": 9654947058
+    },
+    {
+     "ID ": "046\/23",
+     "NAME": "DILIP",
+     "DOB": "08\/18\/1997",
+     "DESIGNATION": "PRT-Karate",
+     "email ID": "dilipshrestha0103@gmail.com",
+     "MOBILE NO": 7678177445
+    },
+    {
+     "ID ": "047\/23",
+     "NAME": "SANDEEP KALSON",
+     "DOB": "10\/25\/1998",
+     "DESIGNATION": "PRT-Basket Ball coach",
+     "email ID": "S13086973@GMAIL.COM",
+     "MOBILE NO": 7357664163
+    },
+    {
+     "ID ": "048\/23",
+     "NAME": "SUNITA RAI",
+     "DOB": "08\/20\/1984",
+     "DESIGNATION": "PRT-Hindi",
+     "email ID": "sunitasharma@gmail.com",
+     "MOBILE NO": 7999864647
+    },
+    {
+     "ID ": "049\/23",
+     "NAME": "POOJA SHUKLA",
+     "DOB": "10\/10\/1992",
+     "DESIGNATION": "NTT",
+     "email ID": "poojashukla0704220@gmail.com",
+     "MOBILE NO": 9643586679
+    },
+    {
+     "ID ": "050\/23",
+     "NAME": "NUPUR JOHARI",
+     "DOB": "07\/02\/1982",
+     "DESIGNATION": "TGT Computer",
+     "email ID": "nupur.johari@gmail.com",
+     "MOBILE NO": 9811545002
+    },
+    {
+     "ID ": "051\/23",
+     "NAME": "PRIYA SHARMA",
+     "DOB": "12\/13\/1998",
+     "DESIGNATION": "TGT Eng",
+     "email ID": "priyasharma9713@gmail.com",
+     "MOBILE NO": 9650601567
+    },
+    {
+     "ID ": "052\/23",
+     "NAME": "GITIKA KAPOOR",
+     "DOB": "02\/29\/1984",
+     "DESIGNATION": "PRT",
+     "email ID": "gitikakapoor29@gmail.com",
+     "MOBILE NO": 9877203438
+    },
+    {
+     "ID ": "053\/23",
+     "NAME": "DEVI PILLAI",
+     "DOB": "06\/25\/1985",
+     "DESIGNATION": "PRT",
+     "email ID": "devimohan85@gmail.com",
+     "MOBILE NO": 9873923432
+    },
+    {
+     "ID ": "053\/23",
+     "NAME": "RENU DWIVEDI",
+     "DOB": "01\/01\/1987",
+     "DESIGNATION": "PRT Science",
+     "email ID": "renu.dwivedi14@gmail.com",
+     "MOBILE NO": 9015152166
+    },
+    {
+     "ID ": "055\/23",
+     "NAME": "DIMPLE",
+     "DOB": "04\/03\/1993",
+     "DESIGNATION": "PRT-Math",
+     "email ID": "dimpletaneja751@gmail.com",
+     "MOBILE NO": 9896014312
+    },
+    {
+     "ID ": "056\/23",
+     "NAME": "VAISHALI MEHRA",
+     "DOB": "12\/28\/1987",
+     "DESIGNATION": "PRT Scienec",
+     "email ID": "VAISHALISHARMA271934@GMAIL.COM",
+     "MOBILE NO": 8800311477
+    },
+    {
+     "ID ": "057\/23",
+     "NAME": "SONIKA JAIN",
+     "DOB": "09\/12\/1982",
+     "DESIGNATION": "PRT",
+     "email ID": "jsonika30@gmail.com",
+     "MOBILE NO": 8178622176
+    },
+    {
+     "ID ": "058\/23",
+     "NAME": "VIMAL CHAUHAN",
+     "DOB": "11\/01\/1986",
+     "DESIGNATION": "PRT-ENG",
+     "email ID": "pinks.ch@gmail.com",
+     "MOBILE NO": 8527916414
+    },
+    {
+     "ID ": "059\/23",
+     "NAME": "DEEPIKA SHARMA",
+     "DOB": "04\/23\/1990",
+     "DESIGNATION": "PRT-Hindi",
+     "email ID": "deepikasharma0332@gmail.com",
+     "MOBILE NO": 6283234351
+    },
+    {
+     "ID ": "060\/23",
+     "NAME": "VINNY MAHAJAN",
+     "DOB": "10\/29\/1987",
+     "DESIGNATION": "PRT",
+     "email ID": "MAHAJAN29OCT@GMAIL.COM",
+     "MOBILE NO": 7428569646
+    },
+    {
+     "ID ": "061\/23",
+     "NAME": "GEETIKA SRIVASTAVA",
+     "DOB": "11\/14\/1983",
+     "DESIGNATION": "PRT",
+     "email ID": "geetu.an415@gmail.com",
+     "MOBILE NO": 9718644522
+    },
+    {
+     "ID ": "062\/23",
+     "NAME": "SHRUTI ARYA",
+     "DOB": "12\/23\/1988",
+     "DESIGNATION": "PGT PSYCHOLOGY",
+     "email ID": "shrutiarya.2388@gmail.com",
+     "MOBILE NO": 9899856030
+    },
+    {
+     "ID ": "064\/22",
+     "NAME": "PRIYA CHOWDHURY",
+     "DOB": "01\/10\/1994",
+     "DESIGNATION": "DANCE",
+     "email ID": "priyachowdhury591@gmail.com",
+     "MOBILE NO": 7001381652
+    },
+    {
+     "ID ": "065\/23",
+     "NAME": "POOJA SAINI",
+     "DESIGNATION": "PGT Commerce",
+     "email ID": "poojasaini.off@gmail.com"
+    },
+    {
+     "ID ": "065\/23",
+     "NAME": "GAYATRI MALVIA",
+     "DOB": "19.01.1999",
+     "DESIGNATION": "PGT Geograpy",
+     "email ID": "gayatrimalvia240@gmail.com",
+     "MOBILE NO": 8839469227
+    },
+    {
+     "ID ": "066\/23",
+     "NAME": "UPASANA PANDA",
+     "DOB": "07\/02\/1985",
+     "DESIGNATION": "TGT-SST",
+     "email ID": "upasana.patro@yahoo.com",
+     "MOBILE NO": 9958630029
+    }
+   ]

@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="../css/bookmanagement.css">
     <title>Book Management</title>
     <link rel="icon" type="image/svg+xml" href="../images/logo_pis.png">
+    
+
 </head>
 <body>
     <div class="nav">
@@ -22,7 +24,7 @@
         
     <button id="showAddFormButton">Add Book</button>
     <button id="showSearchFormButton">Search/Delete Book</button> 
-    
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
     </div>
 
     <form id="addForm" class="hidden">
@@ -54,7 +56,9 @@
         <button id="printBarcodeButton" class="hidden">Print Barcode</button>
     </center>
     </form>
-
+   
+    
+    <!--Form to search the data in the form -->
     <form id="searchForm" class="hidden">
         
 
@@ -62,17 +66,21 @@
     <input type="text" id="documentId" placeholder="Enter Book Reference ID"><br>
     <button id="viewButton">View Details</button>
 
-    <div id="bookDetails" class="hidden">
+    <div id="bookDetails" class="hidden1">
         <!-- Display book details here -->
-        <h2>Student Details</h2>
-        <p><strong>Author:</strong> <span id="studentName"></span></p>
-        <p><strong>Admission No:</strong> <span id="studentAdmissionNo"></span></p>
-        <p><strong>Class:</strong> <span id="Class"></span></p>
-        <p><strong>DOB:</strong> <span id="DOB"></span></p>
-        <p><strong>Issued Book ID:</strong> <span id="issuedBookId"></span></p>
+        <h2>Book Details</h2>
+      <p><strong>Title:</strong> <span id="title"></span></p>
+      <p><strong>Author:</strong> <span id="author"></span></p>
+      <p><strong>Year:</strong> <span id="year"></span></p>
+      <p><strong>No of Pages:</strong> <span id="title"></span></p>
+      <p><strong>Price:</strong> <span id="author"></span></p>
+      <p><strong>Year:</strong> <span id="year"></span></p>
+    
+
+      <button id="deleteButton" class="hidden">Delete Book</button>
     </div>
 
-    <button id="deleteButton" class="hidden">Delete Book</button>
+    
     </form>
 </center>
 
