@@ -57,91 +57,75 @@ if (result == true && password.length >= 6) {
 }
 
 
+
+
 const admissionNoInput = document.getElementById("admissionNoInput");
 const fetchButton = document.getElementById("fetchButton");
 const detailsContainer = document.getElementById("detailsContainer");
 const studentName = document.getElementById("studentName");
 const studentAdmissionNo = document.getElementById("studentAdmissionNo");
 const issuedBookId = document.getElementById("issuedBookId");
-const issueBookForm = document.getElementById("issueBookForm");
-const bookIdInput = document.getElementById("bookIdInput");
-const issueBookButton = document.getElementById("issueBookButton");
+const issueDate = document.getElementById("issueDate");
 const submissionDate = document.getElementById("submissionDate");
+const Class = document.getElementById("Class");
+const DOB = document.getElementById("DOB");
+const fineAmount = document.getElementById("fineAmount");
 
 fetchButton.addEventListener("click", async () => {
-    const AdmNo = admissionNoInput.value;
-    if (AdmNo) {
-        const studentDoc = doc(db, "Student Data", AdmNo);
-        const studentSnapshot = await getDoc(studentDoc);
+  const admissionNo = admissionNoInput.value;
+  if (admissionNo) {
+    const studentDoc = doc(db, "Student Data", admissionNo);
+    const studentSnapshot = await getDoc(studentDoc);
 
-        if (studentSnapshot.exists()) {
-            const studentData = studentSnapshot.data();
-            studentName.textContent = studentData.Name;
-            studentAdmissionNo.textContent = studentData.AdmNo;
-            Class.textContent = studentData.CLASS;
-            issuedBookId.textContent = studentData.issuedBookId || "None";
+    if (studentSnapshot.exists()) {
+      const studentData = studentSnapshot.data();
+      studentName.textContent = studentData.Name;
+      studentAdmissionNo.textContent = studentData.AdmNo;
+      issuedBookId.textContent = studentData.issuedBookId || "None";
+      issueDate.textContent = studentData.issueDate || "";
+      submissionDate.textContent = studentData.submissionDate || "";
+      Class.textContent = studentData.CLASS;
+      DOB.textContent = studentData.DOB;
 
-            if (!studentData.issuedBookId) {
-                returnBookForm.classList.remove("hidden");
-            } else {
-                returnBookForm.classList.add("hidden");
-            }
+      // to calculate the fine amount
 
-            detailsContainer.classList.remove("hidden");
-        } else {
-            detailsContainer.classList.add("hidden");
-            alert("Student not found.");
-        }
+      
+      returnBookForm.classList.remove("hidden");
+      detailsContainer.classList.remove("hidden");
+    } else {
+      detailsContainer.classList.add("hidden");
+      alert("Student not found.");
     }
+  }
 });
-
-// ... (previous imports and code) ...
-
-const returnBookForm = document.getElementById("returnBookForm");
-const returnBookIdInput = document.getElementById("returnBookIdInput");
-const returnBookButton = document.getElementById("returnBookButton");
-const penaltyAmount = document.getElementById("penaltyAmount");
 
 returnBookButton.addEventListener("click", async () => {
-    const bookId = returnBookIdInput.value;
-    if (bookId) {
-        const studentDoc = doc(db, "StudentData", admissionNoInput.value);
-        const studentSnapshot = await getDoc(studentDoc);
+  const bookId = returnBookIdInput.value;
+  const admissionNo = admissionNoInput.value;
 
-        if (studentSnapshot.exists()) {
-            const studentData = studentSnapshot.data();
+  if (bookId) {
+    const studentDoc = doc(db, "Student Data", admissionNo);
+    const studentSnapshot = await getDoc(studentDoc);
 
-            if (studentData.issuedBookId === bookId) {
-                const currentDate = new Date().toISOString().split("T")[0];
-                const issueDate = studentData.issueDate;
-                const submissionDate = studentData.submissionDate;
+    if (studentSnapshot.exists()) {
+      const studentData = studentSnapshot.data();
 
-                const submissionDateValue = new Date(submissionDate);
-                const currentDateValue = new Date(currentDate);
-                const daysLate = Math.max(0, (currentDateValue - submissionDateValue) / (1000 * 60 * 60 * 24));
-                const penalty = daysLate * 5;
+      if (studentData.issuedBookId === bookId) {
+        await updateDoc(studentDoc, {
+          issuedBookId: null,
+          issueDate: null,
+          submissionDate: null
+        });
 
-                await updateDoc(studentDoc, {
-                    issuedBookId: null,
-                    issueDate: null,
-                    submissionDate: null
-                });
-
-                issuedBookId.textContent = "None";
-                submissionDate.textContent = "";
-                returnBookForm.classList.add("hidden");
-
-                if (penalty > 0) {
-                    penaltyAmount.textContent = `Penalty: Rs. ${penalty}`;
-                    penaltyAmount.classList.remove("hidden");
-                } else {
-                    penaltyAmount.classList.add("hidden");
-                }
-            } else {
-                alert("Incorrect Issued Book ID.");
-            }
-        }
+        issuedBookId.textContent = "None";
+        issueDate.textContent = "";
+        submissionDate.textContent = "";
+        fineAmount.textContent = "";
+        returnBookForm.classList.add("hidden");
+        alert("Book successfully returned.");
+      } else {
+        alert("Incorrect Issued Book ID.");
+      }
     }
+  }
 });
-
-// ... (rest of the code) ...

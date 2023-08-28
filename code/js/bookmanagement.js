@@ -75,7 +75,7 @@ showSearchFormButton.addEventListener("click", () => {
 });
 
 const addBookForm = document.getElementById("addForm");
-const printBarcodeButtons = document.getElementById("printBarcodeButton");
+const printBarcodeButton = document.getElementById("printBarcodeButton");
 
 addBookForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -88,46 +88,46 @@ addBookForm.addEventListener("submit", async (event) => {
     const publisher = addBookForm.querySelector("#publisher").value;
     const dccno = addBookForm.querySelector("#classficationNo").value;
 
-    // ... Collect other form field values ...
-
     // Add book to Firestore
-    try{
-    const docRef = await addDoc(collection(db, "books"), {
-        author,
-        title,
-        page,
-        price,
-        accno,
-        publisher,
-        dccno,
-        // ... Other book details ...
-    });
+    try {
+      const docRef = await addDoc(collection(db, "books"), {
+          author,
+          title,
+          page,
+          price,
+          accno,
+          publisher,
+          dccno,
+          // ... Other book details ...
+      });
 
-     
+      alert("Book added successfully");
 
+      // Show Print Barcode button
+      printBarcodeButton.classList.remove("hidden");
 
-    alert("Book added sucessfully");
-
-    // Printin the Qr code 
-
-    printBarcodeButton.classList.remove("hidden");
-
-    // Generate barcode and display it
-    const barcodeContent = docRef.id;
-    const barcodeSvg = document.getElementById('barcodeSvg'); // Replace with your SVG element
-    JsBarcode(barcodeSvg, barcodeContent, {
-        format: "CODE128",
-        displayValue: true,
-        height: 50
-    });
-
-    
-
-} catch (error) {
-    alert("Error adding book: " + error.message);
-}
+      // Generate barcode and display it
+      const barcodeContent = docRef.id;
+      const barcodeSvg = document.getElementById('barcodeSvg');
+      JsBarcode(barcodeSvg, barcodeContent, {
+          format: "CODE128",
+          displayValue: true,
+          height: 50
+      });
+    } catch (error) {
+      alert("Error adding book: " + error.message);
+    }
 });
 
+printBarcodeButton.addEventListener("click", () => {
+    // Print the barcode
+    const barcodeSvg = document.getElementById('barcodeSvg');
+    const barcodeDataUrl = barcodeSvg.outerHTML;
+    const printWindow = window.open('', '', 'width=600,height=600');
+    printWindow.document.write(barcodeDataUrl);
+    printWindow.document.close();
+    printWindow.print();
+});
 
 
 // code to search the books and delete the data of the book 
