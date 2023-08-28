@@ -97,6 +97,14 @@
     cursor: pointer;
 
 }
+#resetbtn{
+    border-radius: 40px;
+    width: 150px;
+    height: 40px;
+    margin: 4%;
+    cursor: pointer;
+
+}
 
 #returnBookForm{
     margin-top: 3%;

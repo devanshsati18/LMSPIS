@@ -82,6 +82,9 @@ fetchButton.addEventListener("click", async () => {
             Class.textContent = studentData.CLASS;
             DOB.textContent = studentData.DOB
             issuedBookId.textContent = studentData.issuedBookId || "None";
+            issuedDate.textContent = studentData.issueDate || "None";
+            submissionDate.textContent = studentData.submissionDate || "None";
+            
 
             if (!studentData.issuedBookId) {
                 issueBookForm.classList.remove("hidden");
@@ -100,6 +103,7 @@ fetchButton.addEventListener("click", async () => {
 issueBookButton.addEventListener("click", async () => {
     const bookId = bookIdInput.value;
     const admNo = admissionNoInput.value;
+    
     if (bookId) {
         const studentDoc = doc(db, "Student Data", admNo);
         const studentSnapshot = await getDoc(studentDoc);
