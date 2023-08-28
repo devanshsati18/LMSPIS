@@ -133,81 +133,53 @@ printBarcodeButton.addEventListener("click", () => {
 // code to search the books and delete the data of the book 
 
 
-const searchButton = document.getElementById('viewButton');
-const searchInput = document.getElementById('documentIdtxt');
-const bookDetails = document.getElementById('bookDetails');
-const title = document.getElementById('title');
-const author = document.getElementById('author');
-const year = document.getElementById('year');
-const accno = document.getElementById('accno');
-const dccno = document.getElementById('dccno');
-const pages = document.getElementById('pages');
-const price = document.getElementById('price');
-const publisher = document.getElementById('publisher');
 
-const deleteButton = document.getElementById('deleteButton');
+const documentIdInput = document.getElementById("documentId");
+const viewButton = document.getElementById("viewButton");
+const bookDetails = document.getElementById("bookDetails");
+const title = document.getElementById("title");
+const author = document.getElementById("author");
+const year = document.getElementById("year");
+const page = document.getElementById("page");
+const price = document.getElementById("price");
+const accno = document.getElementById("accno");
+const dccno = document.getElementById("dccno");
+const deleteButton = document.getElementById("deleteButton");
 
-searchButton.addEventListener('submit', async () => {
-  const bookCode = searchInput.value;
+viewButton.addEventListener("click", async () => {
+  event.preventDefault();
+    const documentId = documentIdInput.value;
+    if (documentId) {
+        const bookDocRef = doc(db, "books", documentId);
+        const bookSnapshot = await getDoc(bookDocRef);
 
-  try {
-    const docRef = doc(db, "books", bookCode);
-    const docSnap = await getDoc(docRef);
+        if (bookSnapshot.exists()) {
+            const bookData = bookSnapshot.data();
+            title.textContent = bookData.title;
+            author.textContent = bookData.author;
+            year.textContent = bookData.year;
+            page.textContent = bookData.page;
+            price.textContent = bookData.price;
+            accno.textContent = bookData.accno;
+            dccno.textContent = bookData.dccno;
 
-    if (docSnap.exists()) {
-      const data = docSnap.data();
-      title.textContent = data.title;
-      author.textContent = data.author;
-      year.textContent = data.year;
-      accno.textContent = data.accno;
-      dccno.textContent = dccno.author;
-      price.textContent = price.year;
-      pages.textContent = price.pages;
-      publisher.textContent = publisher.year;
+            // ... (Set other span values for book details) ...
 
-      
-
-      bookDetails.classList.remove("hidden1");
-
-      
-
-
-
-      
-    } else {
-      clearBookDetails();
+            deleteButton.classList.remove("hidden");
+            bookDetails.classList.remove("hidden");
+        } else {
+            alert("Book not found.");
+            bookDetails.classList.add("hidden");
+            deleteButton.classList.add("hidden");
+        }
     }
-  } catch (error) {
-    console.error("Error fetching document: ", error);
-    clearBookDetails();
-  }
 });
 
-deleteButton.addEventListener('click', async () => {
-  const bookCode = searchInput.value;
-
-  try {
-    await deleteDoc(doc(db, "books", bookCode));
-    clearBookDetails();
-  } catch (error) {
-    console.error("Error deleting document: ", error);
-  }
+deleteButton.addEventListener("click", async () => {
+    const documentId = documentIdInput.value;
+    if (confirm("Are you sure you want to delete this book?")) {
+        await deleteDoc(doc(db, "books", documentId));
+        alert("Book deleted successfully.");
+        bookDetails.classList.add("hidden");
+    }
 });
-
-function displayBookDetails(data, bookCode) {
-  titleSpan.textContent = data.title;
-  authorSpan.textContent = data.author;
-  yearSpan.textContent = data.year;
-  deleteButton.dataset.bookCode = bookCode;
-  bookDetails.classList.remove('hidden');
-}
-
-function clearBookDetails() {
-  titleSpan.textContent = "";
-  authorSpan.textContent = "";
-  yearSpan.textContent = "";
-  deleteButton.dataset.bookCode = "";
-  bookDetails.classList.add('hidden');
-}
-
-

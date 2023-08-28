@@ -50,13 +50,14 @@
             <label for="classficationNo">Classification No:</label>
             <input  id="classficationNo" name="classficationNo" required><br>
 
-            <button id="addbtndetails"type="submit">Add Book</button>
+            <button id="addbtndetails"type="submit">Add Book</button><br>
         
+            <svg id="barcodeSvg"></svg><br>
     
         <button id="printBarcodeButton" class="hidden">Print Barcode</button>
     </center>
     </form>
-    <svg id="barcodeSvg"></svg>
+    
     
     <!--Form to search the data in the form -->
     <form id="searchForm" class="hidden">
@@ -66,15 +67,17 @@
     <input type="text" id="documentId" placeholder="Enter Book Reference ID"><br>
     <button id="viewButton">View Details</button>
 
-    <div id="bookDetails" class="hidden1">
+    <div id="bookDetails" class="hidden">
         <!-- Display book details here -->
         <h2>Book Details</h2>
       <p><strong>Title:</strong> <span id="title"></span></p>
       <p><strong>Author:</strong> <span id="author"></span></p>
       <p><strong>Year:</strong> <span id="year"></span></p>
-      <p><strong>No of Pages:</strong> <span id="title"></span></p>
-      <p><strong>Price:</strong> <span id="author"></span></p>
-      <p><strong>Year:</strong> <span id="year"></span></p>
+      <p><strong>No of Pages:</strong> <span id="page"></span></p>
+      <p><strong>Price:</strong> <span id="price"></span></p>
+      <p><strong>Accession No:</strong> <span id="accno"></span></p>
+      <p><strong>Decimal No:</strong> <span id="dccno"></span></p>
+
     
 
       <button id="deleteButton" class="hidden">Delete Book</button>
