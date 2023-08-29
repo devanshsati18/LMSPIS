@@ -119,11 +119,18 @@ addBookForm.addEventListener("submit", async (event) => {
     }
 });
 
+
+
+
+
+
 printBarcodeButton.addEventListener("click", () => {
     // Print the barcode
+    event.preventDefault();
+    
     const barcodeSvg = document.getElementById('barcodeSvg');
     const barcodeDataUrl = barcodeSvg.outerHTML;
-    const printWindow = window.open('', '', 'width=600,height=600');
+    const printWindow = window.open('', '', 'width=300,height=150');
     printWindow.document.write(barcodeDataUrl);
     printWindow.document.close();
     printWindow.print();
