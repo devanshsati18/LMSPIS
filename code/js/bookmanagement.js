@@ -113,6 +113,7 @@ addBookForm.addEventListener("submit", async (event) => {
           format: "CODE128",
           displayValue: true,
           height: 45,
+          shrink: true,
           
           
       });
@@ -126,7 +127,7 @@ addBookForm.addEventListener("submit", async (event) => {
 
 
 
-printBarcodeButton.addEventListener("click", () => {
+/*printBarcodeButton.addEventListener("click", () => {
     // Print the barcode
     event.preventDefault();
     
@@ -136,7 +137,34 @@ printBarcodeButton.addEventListener("click", () => {
     printWindow.document.write(barcodeDataUrl);
     printWindow.document.close();
     printWindow.print();    
+});*/
+printBarcodeButton.addEventListener("click", () => {
+    // Convert the barcode SVG to an image and save
+    const barcodeSvg = document.getElementById('barcodeSvg');
+    const barcodeCanvas = document.createElement('canvas');
+    barcodeCanvas.width = barcodeSvg.width.baseVal.value;
+    barcodeCanvas.height = barcodeSvg.height.baseVal.value;
+    const context = barcodeCanvas.getContext('2d');
+    const svgString = new XMLSerializer().serializeToString(barcodeSvg);
+    const img = new Image();
+    
+    img.onload = () => {
+        context.drawImage(img, 0, 0);
+        const link = document.createElement('a');
+        link.href = barcodeCanvas.toDataURL('image/png');
+        link.download = 'barcode.png';
+        link.click();
+    };
+    
+    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgString);
 });
+
+
+
+
+
+
+
 
 
 // code to search the books and delete the data of the book 
