@@ -194,7 +194,7 @@ viewButton.addEventListener("click", async () => {
             const bookData = bookSnapshot.data();
             title.textContent = bookData.title;
             author.textContent = bookData.author;
-            year.textContent = bookData.year;
+            
             page.textContent = bookData.page;
             price.textContent = bookData.price;
             accno.textContent = bookData.accno;
