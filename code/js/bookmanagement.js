@@ -112,7 +112,8 @@ addBookForm.addEventListener("submit", async (event) => {
       JsBarcode(barcodeSvg, barcodeContent, {
           format: "CODE128",
           displayValue: true,
-          height: 50
+          height: 45
+          
       });
     } catch (error) {
       alert("Error adding book: " + error.message);
@@ -130,10 +131,10 @@ printBarcodeButton.addEventListener("click", () => {
     
     const barcodeSvg = document.getElementById('barcodeSvg');
     const barcodeDataUrl = barcodeSvg.outerHTML;
-    const printWindow = window.open('', '', 'width=300,height=150');
+    const printWindow = window.open('', '', 'width=1500','height=1500');
     printWindow.document.write(barcodeDataUrl);
     printWindow.document.close();
-    printWindow.print();
+    printWindow.print();    
 });
 
 
