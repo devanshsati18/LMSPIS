@@ -112,7 +112,8 @@ addBookForm.addEventListener("submit", async (event) => {
       JsBarcode(barcodeSvg, barcodeContent, {
           format: "CODE128",
           displayValue: true,
-          height: 45
+          height: 45,
+          
           
       });
     } catch (error) {
